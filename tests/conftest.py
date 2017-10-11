@@ -12,4 +12,6 @@ def remove_db_file(request):
     Note:
         It's to prevent errors when changing Django versions.
     """
-    os.remove(settings.DATABASES["default"]["TEST"]["NAME"])
+    test_db = settings.DATABASES["default"]["TEST"]["NAME"]
+    if os.path.exists(test_db):
+        os.remove()
