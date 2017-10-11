@@ -17,7 +17,7 @@ install:
 
 test_script:
     - '%PYTHON%\\python.exe -c "import sys; print sys.platform"'
-    - "%PYTHON%\\Scripts\\tox.exe win32-py2.7-django%DJANGO%"
+    - "%PYTHON%\\Scripts\\tox.exe -e win32-py2.7-django%DJANGO%"
 
 on_failure:
     - appveyor PushArtifact "%userprofile%\\.rotest\\core_logger\\core_logger.log"
