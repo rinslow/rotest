@@ -22,6 +22,22 @@ Why use rotest?
 - Lots of useful features: multiprocess, filtering tests, variety of result
   handlers (and the ability to define custom ones), and much more.
 
+Compatibility
+=============
++-------------+-------------+-------------------+-------------------+
+|             | CPython 2.7 |        PyPy       |  CPython >= 3.4   |
++-------------+-------------+-------------------+-------------------+
+| Django 1.7  |      V      | Under development | Under development |
++-------------+-------------+-------------------+-------------------+
+| Django 1.8  |      V      | Under development | Under development |
++-------------+-------------+-------------------+-------------------+
+| Django 1.9  |      V      | Under development | Under development |
++-------------+-------------+-------------------+-------------------+
+| Django 1.10 |      V      | Under development | Under development |
++-------------+-------------+-------------------+-------------------+
+| Django 1.11 |      V      | Under development | Under development |
++-------------+-------------+-------------------+-------------------+
+
 Examples
 ========
 For a complete step-by-step explanation about the framework, you can read
