@@ -15,6 +15,7 @@ from tests.core.multiprocess.utils import TimeoutCase
 from tests.core.utils import MockTestSuite, override_client_creator
 
 
+@pytest.mark.django_db(transaction=True)
 class AbstractCrashTest(unittest.TestCase):
     """Abstract test for multiprocess module behavior upon processes death."""
     RUN_NAME = 'crash UT'

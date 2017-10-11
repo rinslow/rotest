@@ -3,7 +3,7 @@ import unittest
 
 from rotest.core.case import TestCase
 from rotest.core.suite import TestSuite
-from rotest.core.test_filter import get_tags, match_tags
+from rotest.core.filter_tests import get_tags, match_tags
 from rotest.common.colored_test_runner import colored_main
 
 from utils import (SuccessCase, ErrorCase, TwoTestsCase,

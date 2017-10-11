@@ -19,15 +19,18 @@ INSTALLED_APPS = ('rotest.core',
                   'django.contrib.admin')
 
 
-DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3',
-                         'NAME': 'rotest_ut',
-                         'USER': '',
-                         'PASSWORD': '',
-                         'HOST': '',
-                         'PORT': '',
-                         'TEST_NAME': 'rotest_ut_test'
-                         }
-             }
+DATABASES = {
+    'default':
+        {'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'rotest_ut',
+         'USER': '',
+         'PASSWORD': '',
+         'HOST': '',
+         'PORT': '',
+         'TEST_NAME': 'rotest_ut_test',
+         'TEST': {'NAME': 'rotest_ut_test'}
+         }
+     }
 
 if platform.system() == 'Windows':
     try:

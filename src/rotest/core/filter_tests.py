@@ -22,7 +22,8 @@ def validate_boolean_expression(expression):
     """
     for literal in expression.split():
         if literal not in VALID_LITERALS and literal != "":
-            raise ValueError("Illegal boolean expression %r" % expression)
+            raise ValueError("Illegal boolean "
+                             "expression {}".format(expression))
 
 
 def get_tags(test):
@@ -95,4 +96,4 @@ def match_tags(tags_list, tags_filter):
         return eval(boolean_expression)
 
     except SyntaxError:
-        raise ValueError("Illegal boolean expression %r" % tags_filter)
+        raise ValueError("Illegal boolean expression {!r}".format(tags_filter))

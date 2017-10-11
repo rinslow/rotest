@@ -35,8 +35,6 @@ FIXTURE_DIRS = [os.path.join(os.path.dirname(__file__), 'fixtures')]
 # Debug flag - used to expose internal site errors
 DEBUG = True
 
-TEST_RUNNER = 'test_runners.DjangoColorTestSuiteRunner'
-
 ROOT_URLCONF = 'urls'
 
 # URL prefix for static files.

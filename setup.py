@@ -29,7 +29,7 @@ setup(
     author_email="gregoil@walla.co.il",
     url="https://github.com/gregoil/rotest",
     keywords="testing system django unittest",
-    install_requires=['django>=1.7,<1.8',
+    install_requires=['django>=1.7,<2.0',
                       'ipdb',
                       'ipdbugger>=1.1.2',
                       'lxml<4.0.0',

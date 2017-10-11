@@ -1,5 +1,4 @@
 """Collection of documentation parsers."""
-
 import re
 import abc
 
@@ -16,27 +15,27 @@ class DocsidoError(ExtensionError):
 
 class BasicNodeParser(object):
     """An abstract parser that converts a node based on parsing a text.
-    
+
     Common usage: `InheritingParser(new_node_type, title).convert(node, text)`
-    
+
     Attributes:
         new_node_type (type): the type of the new node.
-        title (str): title name.    
+        title (str): title name.
     """
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractproperty
     def regex(self):
         raise NotImplementedError()
-    
+
     def __init__(self, new_node_type, title):
         self.new_node_type = new_node_type
         self.title = title
-    
+
     @abc.abstractmethod
     def parse_args(self, re_res):
         """Return new node constructor tuple from RE result
-        
+
         Returns:
             tuple. Will be sent as *args in the constructor of the new node
         """

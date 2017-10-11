@@ -103,7 +103,11 @@ class BaseTestRunner(TextTestRunner):
             enable_debug=self.enable_debug,
             resource_manager=self.resource_manager)
 
+        run_data.save()  # Saving, so that the entry will be created
+
+        # Commiting the link between the test and the run data
         run_data.main_test = self.test_item.data
+        self.test_item.data.save()
 
     def finalize(self):
         """Finalize the test runner.

@@ -1,7 +1,16 @@
 """Django definitions for the administrator site urls."""
+# pylint: disable=no-name-in-module
+import django
 from django.contrib import admin
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 
 admin.autodiscover()
-urlpatterns = patterns('', url(r'^admin/', include(admin.site.urls)))
+
+urls = [url(r'^admin/', include(admin.site.urls))]
+
+if "1.7" <= django.get_version() < "1.8":
+    from django.conf.urls import patterns
+    urlpatterns = patterns('', *urls)
+else:
+    urlpatterns = urls
