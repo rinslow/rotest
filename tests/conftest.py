@@ -14,4 +14,4 @@ def remove_db_file(request):
     """
     test_db = settings.DATABASES["default"]["TEST"]["NAME"]
     if os.path.exists(test_db):
-        os.remove()
+        os.remove(test_db)
