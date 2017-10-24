@@ -105,7 +105,7 @@ class BaseTestRunner(TextTestRunner):
 
         run_data.save()  # Saving, so that the entry will be created
 
-        # Commiting the link between the test and the run data
+        # Committing the link between the test and the run data
         run_data.main_test = self.test_item.data
         self.test_item.data.save()
 
